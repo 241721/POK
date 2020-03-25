@@ -1,4 +1,5 @@
 clear all;
+clc;
 U = [2 1 1 -1 3;1 1 -1 1 4; 1 1 1 1 10; -1 2 -1 1 4];
 A = U(:,1:end-1);
 U_size = size(U);
@@ -17,7 +18,7 @@ if rank(U) == rank(A)
                 else
                     m=-(U(j,i)/U(i,i));
                     for k=i+1:n+1
-                        U(j,k) =U(j,k)+ m*U(i,k); 
+                        U(j,k) =U(j,k)+ m*U(i,k);
                     end
                 end
             end
@@ -28,14 +29,17 @@ if rank(U) == rank(A)
                 s = s-U(i,j)*X(j);
             end
             if abs(U(i,i))<epsi
-               break;
+                break;
             end
             X(i)=s/U(i,i);
             r = true;
         end
         if r==true
             disp("Rozwiazanie uk³adu: ");
-            disp(X);
+            s = size(X);
+            for i=1:s(2)
+                fprintf("x%i = %8.3f\n",i,X(i));
+            end
         else
             disp("Uk³ad ma rozwi¹zanie ale nie uda³o siê go znaleŸæ :C");
         end
