@@ -18,6 +18,10 @@ for i=1:s(1)
     U(i,s(2)+1)=b(i);
 end
 
+%x = A\b mo¿e rozwi¹zanie w jednej linijce, poniewa¿ matlab do znalezenia
+%wyniku tego wyra¿enia u¿ywa metody eliminacji gaussa
+
+
 %U = [2 1 1 -1 3;1 1 -1 1 4; 1 1 1 1 10; -1 2 -1 1 4]; %Macierz wspó³czynników | wektor danych
 %A = U(:,1:end-1); 
 U_size = size(U);
