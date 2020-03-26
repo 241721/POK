@@ -1,25 +1,12 @@
 clear all;
 clc;
 prompt = {'Separator rzêdów (;):'};
-dlgtitle = 'Wprowadz macierz wspolczynnikow A';
-answer = inputdlg(prompt,dlgtitle, [1 75]);
+dlgtitle = 'Wprowadz macierz wspolczynnikow';
+answer = inputdlg(prompt,dlgtitle);
 answer = strcat('[',answer,']');
-A = str2num(answer{1}) %Macierz wspó³czynników
-prompt = {'Separator rzêdów (;):'};
-dlgtitle = 'Wprowadz wektor danych b';
-answer = inputdlg(prompt,dlgtitle, [1 75]);
-answer = strcat('[',answer,']');
-b = str2num(answer{1}); %Wektor danych
-
-U = A;
-s = size(A);
-
-for i=1:s(1)
-    U(i,s(2)+1)=b(i);
-end
-
-%U = [2 1 1 -1 3;1 1 -1 1 4; 1 1 1 1 10; -1 2 -1 1 4]; %Macierz wspó³czynników | wektor danych
-%A = U(:,1:end-1); 
+user_val = str2num(answer{1})
+U = [2 1 1 -1 3;1 1 -1 1 4; 1 1 1 1 10; -1 2 -1 1 4]; %Macierz wspó³czynników | wektor danych
+A = U(:,1:end-1); %Macierz wspó³czynników
 U_size = size(U);
 n = U_size(2)-1;
 m = U_size(1);
