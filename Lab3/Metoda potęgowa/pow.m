@@ -15,5 +15,6 @@ x=x/x(end);
 disp(x)
 disp(i)
 disp(max(y))
+disp("KONIEC")
 
 
