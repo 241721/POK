@@ -19,7 +19,7 @@ elseif y(x2) == 0
   return
 end
 
-for i = 1: 100          %Liczba sekcji
+for i = 1: 100          %Liczba iteracji
   xh = (x1+x2)/2;       %Algorytm bisekcji
   if y(x1)*y(xh) < 0
     x2 = xh;
@@ -30,4 +30,4 @@ for i = 1: 100          %Liczba sekcji
     break
   end
 end
-fprintf('Szukany pierwiastek: %f\nLiczba bisekcji: %d\n',x1,i) %Rozwi¹zanie
+fprintf('Szukany pierwiastek: %f\nLiczba iteracji: %d\n',x1,i) %Rozwi¹zanie
