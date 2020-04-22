@@ -2,6 +2,7 @@ clear all;
 clc;
 close all;
 y = @(x) x+log10(x)-sin(x)^2;       %Funkcje podane przez prowadz¹cego
+tol = 1.0E-6
 %y = @(x) x^2+log10(x)-sin(x);
 x1 = input('Proszê podaæ wartoœæ x1: ');    %Podanie przedzia³ów dla których chcemy zbadaæ funkcje
 x2 = input('Proszê podaæ wartoœæ x2: ');
@@ -25,7 +26,7 @@ for i = 1: 100          %Liczba sekcji
   else
     x1 = xh;
   end
-  if abs(y(x1)) < 1.0E-6
+  if abs(y(x1)) < tol
     break
   end
 end
