@@ -1,0 +1,20 @@
+close all;
+clear  all;
+
+syms l 
+%zadania macierz
+A=[3,1,2;1,8,1;2,1,1];
+%macierz diagonalna
+I=eye(3,3);
+A_l=A-l*I;
+%wyznacznik macierz z niewiadom¹ l=lambda
+d=det(A_l);
+%pierwiastki
+soll = solve(d, l);
+%I-macierz diagonalna, V-macierz wektorów w³asnych
+[V,I]=eig(A);
+
+disp('Wartoœci w³asne macierzy:');
+disp(single(subs(soll)));
+disp('Wektory w³asne macierzy:');
+disp(V);
