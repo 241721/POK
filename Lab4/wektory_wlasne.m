@@ -17,4 +17,9 @@ soll = solve(d, l);
 disp('Wartoœci w³asne macierzy:');
 disp(single(subs(soll)));
 disp('Wektory w³asne macierzy:');
-disp(V);
+s = size(V);
+for i = 1 :s
+    V(:,i)=V(:,i)/V(end,i);
+    disp("Wektor "+ i + ":")
+    disp(V(:,i)');
+end

@@ -3,10 +3,10 @@ close all;
 
 %zadana funckja
 syms x x2 
-y =@(x) x+log10(x)-(sin(x))^2;
-y2 = @(x2) x2+log10(x2)-(sin(x2))^2;
-%y=x^2+log10(x)-sin(x);
-%y2=x2^2+log10(x2)-sin(x2);
+% y =@(x) x+log10(x)-(sin(x))^2;
+% y2 = @(x2) x2+log10(x2)-(sin(x2))^2;
+y=@(x)x^2+log10(x)-sin(x);
+y2=@(x) x2^2+log10(x2)-sin(x2);
 
 
 %deklaracja przedzia³u 
