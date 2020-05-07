@@ -11,6 +11,5 @@ end
 hold on;
 
 plot(xx,yy,'--');
-%plot(x,y,'r*',xx,yy);
 plot(x,y);
 legend('interpolacja funkcjami sklejanymi','funkcja interpolowana');

@@ -1,6 +1,4 @@
 function x = LUsol3(c,d,e,b)
-% Rozwiazuje uklad A*x=b, gdzie A=[c/d/e] jest dekompozycja LU
-% oryginalnej trojdiagonalnej macierzy A.
 n = length(d);
 for k = 2:n
 b(k) = b(k) - c(k-1)*b(k-1);

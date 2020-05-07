@@ -1,7 +1,4 @@
 function k = splineCurv(xData, yData)
-% Zwraca wartosc drugich pochodnych w wezlach
-% dane wejsciowe: xData - wspolrzedne x wezlow,
-% yData - wspolrzedne y wezlow.
 n = length(xData); c = zeros(n-1, 1); d = ones(n,1);
 e = zeros(n-1,1); k = zeros(n,1);
 c(1:n-2) = xData(1:n-2) - xData(2:n-1);

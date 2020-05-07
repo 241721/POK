@@ -1,5 +1,4 @@
 function i = findSeg(xData,x)
-% Zwraca numer przedzialu w ktorym znajduje sie x
 iLeft = 1;
 iRight = length(xData);
 while 1
