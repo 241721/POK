@@ -1,7 +1,7 @@
-range = [-.5,.5];
-nodes = 9;
+range = [-1,2*pi];
+nodes = 7;
 x = linspace(range(1),range(2),nodes);
-y = -abs(x);
+y = abs(x);
 k = splineCurv(x,y);
 xx = linspace(range(1),range(2),101);
 for i = 1:101
@@ -11,5 +11,5 @@ end
 hold on;
 
 
-plot(x,y,'r*',xx,yy);
-plot(x,y);
+plot(xData,yData,'r*',xx,yy);
+plot(xData,yData);
