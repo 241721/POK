@@ -10,6 +10,7 @@ end
 
 hold on;
 
-
-plot(x,y,'r*',xx,yy);
+plot(xx,yy,'--');
+%plot(x,y,'r*',xx,yy);
 plot(x,y);
+legend('interpolacja funkcjami sklejanymi','funkcja interpolowana');
