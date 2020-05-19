@@ -5,8 +5,12 @@ f=@(x)x^2+3; %zdefiniowana funkcja
 a=2; %dolny przedzia³ ca³ki
 b=5; %górny przedzia³ ca³ki
 n = input('Wpisz liczbe podprzedzia³ów, n: '); %nasz przedzia³ dzielimy na liczbê n podprzedzia³ów
+if n <= 0 %pêtla sprawiaj¹ca, ¿e ka¿da liczba bêdzie parzysta, poniewa¿ tylko dla takich dzia³a metoda Simpsona
+   disp("Liczba podprzedzia³ów musi byæ wiêksza od zera.");
+end
 if mod(n,2) == 1 %pêtla sprawiaj¹ca, ¿e ka¿da liczba bêdzie parzysta, poniewa¿ tylko dla takich dzia³a metoda Simpsona
    n=n+1;
+   disp("Metoda dzia³a dla parzystej ilosci podprzedzia³ów. Zwiêkszono ich liczbê podprzedzia³ów o 1.");
 end
 h = (b-a)/n; %d³ugoœæ ka¿dego podprzedzia³u
 s=f(a)+f(b); %rozpisanie wzoru sumacyjnego dla metody Simpsona 
