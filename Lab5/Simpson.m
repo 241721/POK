@@ -21,4 +21,6 @@ end
 for i=2:2:n-2
     s=s+2*f(a+i*h);
 end
-I=(h/3)*s %ostatni krok w naszym wzorze i podanie wyniku
+
+I=(h/3)*s; %ostatni krok w naszym wzorze 
+disp("Ca³ka wynosi: " + I); %i podanie wyniku
