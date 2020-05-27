@@ -72,9 +72,6 @@ for i=0:100
     wartosc=double(subs(y));
     disp("y=")
     disp(wartosc)
-    %iloœc iteracji
-    disp("ilosc iteracji:")
-    disp(iter)
 end
 
     
