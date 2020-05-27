@@ -24,18 +24,18 @@ end
 
 %U = [2 1 1 -1 3;1 1 -1 1 4; 1 1 1 1 10; -1 2 -1 1 4]; %Macierz wspó³czynników | wektor danych
 %A = U(:,1:end-1); 
-U_size = size(U);
+U_size = size(U);  
 n = U_size(2)-1;
 m = U_size(1);
 r = rank(A);
 
 if rank(U) == rank(A)
     if r == n
-        epsi = 1e-12;
+        epsi = 1e-12; %przyjeta docelowa dokladnosc
         r = false;
         for i=1:n-1
             for j=i+1:n
-                if abs(U(i,i)) < epsi
+                if abs(U(i,i)) < epsi %warunek dok³adnoœci - stopu
                     break;
                 else
                     m=-(U(j,i)/U(i,i));
@@ -54,9 +54,9 @@ if rank(U) == rank(A)
                 break;
             end
             X(i)=s/U(i,i);
-            r = true;
+            r = true; %jeœli znaleziono rozwiazanie to true
         end
-        if r==true
+        if r==true %jesli znaleziono rozwiazanie to zrob...
             disp("Rozwiazanie uk³adu: ");
             s = size(X);
             for i=1:s(2)
