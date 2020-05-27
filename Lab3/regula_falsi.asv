@@ -69,7 +69,9 @@ for i=0:100
     fprintf("x = %f\n",double(x))
     %wypisanie wartosci funkcji w miesjcu zerowym
     wartosc=double(subs(y));
-    fprintf("y = %d\n",wartosc)
+    fprintf("x = %f\n",double(x))
+    disp("y=")
+    disp(wartosc)
 end
 
     
