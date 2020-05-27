@@ -1,5 +1,5 @@
-f=@(x)x^2+3;
-przedzial = [2 5];
+f=@(x)x^2+3; %dana wejściowa
+przedzial = [2 5]; %przedział naszej całki
 n = 10000000; %ilosc problek
 counter = 0;    %zmienna do zliczania ile probek znajduje sie pod funkcja
 for i=1:n
