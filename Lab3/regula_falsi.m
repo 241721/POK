@@ -63,8 +63,8 @@ for i=0:100
         iter=i;
         break
     end
-end
-
+    %iteracja
+    disp("iteracja " + i+1)
     %wypisanie pierwiastka
     disp("x=")
     disp(double(x))
@@ -75,6 +75,9 @@ end
     %iloœc iteracji
     disp("ilosc iteracji:")
     disp(iter)
+end
+
+    
 
 
 
