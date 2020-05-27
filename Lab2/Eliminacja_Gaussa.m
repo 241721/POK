@@ -2,13 +2,13 @@ clear all;
 clc;
 prompt = {'Separator rzêdów (;):'};
 dlgtitle = 'Wprowadz macierz wspolczynnikow A';
-answer = inputdlg(prompt,dlgtitle, [1 75]);
-answer = strcat('[',answer,']');
+answer = inputdlg(prompt,dlgtitle, [1 75]); %wprowadzanie danych z klawiatury
+answer = strcat('[',answer,']'); %obrówka danych wejœciowych
 A = str2num(answer{1}) %Macierz wspó³czynników
 prompt = {'Separator rzêdów (;):'};
 dlgtitle = 'Wprowadz wektor danych b';
-answer = inputdlg(prompt,dlgtitle, [1 75]);
-answer = strcat('[',answer,']');
+answer = inputdlg(prompt,dlgtitle, [1 75]); %wprowadzanie danych z klawiatury
+answer = strcat('[',answer,']'); %obrówka danych wejœciowych
 b = str2num(answer{1}); %Wektor danych
 
 U = A;
