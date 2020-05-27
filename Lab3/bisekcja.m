@@ -29,5 +29,6 @@ for i = 1: 100          %Liczba iteracji
   if abs(y(x1)) < tol
     break
   end
+  fprintf('Szukany pierwiastek: %f\nIteracja: %d\n',x1,i) %Rozwi¹zanie
 end
 fprintf('Szukany pierwiastek: %f\nLiczba iteracji: %d\n',x1,i) %Rozwi¹zanie
